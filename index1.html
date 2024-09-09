@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Bucin Interaktif</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe3e3;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #e63946;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .quote {
+            margin: 20px 0;
+            padding: 20px;
+            border-left: 5px solid #e63946;
+            background-color: #ffe6e6;
+            font-style: italic;
+        }
+        button {
+            background-color: #e63946;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        button:hover {
+            background-color: #d62828;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kata-Kata Cinta</h1>
+        <p>Tekan tombol di bawah untuk mendapatkan kata-kata cinta acak!</p>
+        
+        <div class="quote" id="quote">
+            "Cinta adalah ketika kebahagiaan orang lain lebih penting dari kebahagiaanmu."
+        </div>
+
+        <button onclick="generateQuote()">Dapatkan Kata Cinta</button>
+    </div>
+
+    <script>
+        function generateQuote() {
+            const quotes = [
+                "Cinta adalah ketika kebahagiaan orang lain lebih penting dari kebahagiaanmu.",
+                "Aku hanya ingin kamu tahu, kamu selalu ada di pikiranku.",
+                "Tanpamu, hatiku seperti lagu yang kehilangan nadanya.",
+                "Kamu adalah alasan aku bangun setiap pagi dengan senyuman.",
+                "Aku ingin bersamamu sekarang, besok, dan selamanya."
+            ];
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quote').innerHTML = quotes[randomIndex];
+        }
+    </script>
+</body>
+</html>
